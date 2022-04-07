@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= pageTitle %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <% exchanges.map((exchange)=> { %>
+        <li>
+          <a href=" <%= exchange.website %> ">
+            <%= exchange.name %>
+          </a>
+        </li>
+        <% }) %>
+    </ul>
+  </nav>
+
+  <div>
+    <h1>
+      <%= pageTitle %>
+    </h1>
+    <h3>Welcome to <%= pageTitle %>
+    </h3>
+  </div>
+
+  <ul class="ul">
+    <% exchanges.map((exchange)=> { %>
+      <li>
+        <a href=" <%= exchange.website %> ">
+
+          <%= exchange.name %>
+        </a>
+        <%= "Volume 24h: " %>
+          <%= exchange.volume_24h.toFixed(2) %>
+      </li>
+      <% }) %>
+  </ul>
+
+  <footer>
+    <p>Copyright © 2022 Orhan Kadirov All Right Reserved</p>
+  </footer>
+</body>
+
+</html>
