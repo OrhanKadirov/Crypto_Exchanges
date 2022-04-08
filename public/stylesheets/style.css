@@ -37,12 +37,13 @@ nav ul li:hover {
   justify-content: center;
   background-color: bisque;
   border-radius: 5px;
+  text-decoration: underline;
 }
 
 .ul {
   width: 550px;
   margin: auto;
-  padding: 1rem;
+  padding: 1rem 0 3rem 0;
   background-color: white;
   list-style-type: none;
   border-radius: 10px;
@@ -75,8 +76,36 @@ div {
   opacity: 0.75;
 }
 
+.coins {
+  width: 780px;
+  margin: auto;
+  padding: 1rem;
+  background-color: white;
+  list-style-type: none;
+  border-radius: 10px;
+  opacity: 0.75;
+}
+
+.coins li {
+  margin-left: 40px;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.popular_100_coins {
+  width: 545px;
+  margin: -35px auto;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.75;
+}
+
 footer {
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 footer p {

@@ -33,4 +33,28 @@ router.get("/", async (req, res) => {
   }
 });
 
+const getCoins = async () => {
+  //https://www.cryptingup.com/api/markets`;
+
+  try {
+    const response = await axios.get(`https://api.coincap.io/v2/assets`);
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+router.get("/coins", async (req, res) => {
+  try {
+    const data = await getCoins();
+    return res.render("coins", {
+      pageTitle: "Most popular 100 Coins",
+      coins: data.data,
+    });
+  } catch (err) {
+    return res.status(404).render("error", { message: err.message });
+  }
+});
+
 module.exports = router;

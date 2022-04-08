@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= pageTitle %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+  <div>
+    <h1>
+      <%= pageTitle %>
+    </h1>
+
+    <a href="./" rel="noopener noreferrer">
+      <%= "Home" %>
+    </a>
+
+  </div>
+
+  <ul class="coins">
+    <% coins.map((coin, index)=> { %>
+      <li>
+        <%= `${index + 1}` %>
+          <a href=" <%= coin.explorer %> ">
+            <%= `- ${coin.id}` %>
+              <%= `- ${coin.symbol}` %>
+          </a>
+          <%= "=> Volume 24h: " %>
+            <%= coin.volumeUsd24Hr %>
+      </li>
+      <% }) %>
+  </ul>
+
+  <footer>
+    <p>Copyright © 2022 Orhan Kadirov All Right Reserved</p>
+  </footer>
+</body>
+
+</html>
